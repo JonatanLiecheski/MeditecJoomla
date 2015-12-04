@@ -1,0 +1,30 @@
+<metadata>
+	<layout title="COM_MATUKIO_CALENDAR_VIEW_MOOTOOLS_OLD">
+		<message>COM_MATUKIO_CALENDAR_VIEW_MOOTOOLS_OLD_DESC</message>
+	</layout>
+	<name>COM_MATUKIO_CALENDAR_VIEW_MOOTOOLS_OLD</name>
+	<description>COM_MATUKIO_CALENDAR_VIEW_MOOTOOLS_OLD_DESC</description>
+	<!-- joomla 1.6 -->
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="title" type="text" size="50" default="COM_MATUKIO_CALENDAR_VIEW"
+			       label="COM_MATUKIO_CALENDAR_TITLE">
+			</field>
+
+			<field name="dateFormat" type="text" size="10" default="%Y-%m-%d"
+			       label="COM_MATUKIO_CALENDAR_DATE_FORMAT">
+			</field>
+
+			<field name="timeFormat" type="text" size="10" default="%I:%M"
+			       label="COM_MATUKIO_CALENDAR_TIME_FORMAT">
+			</field>
+
+			<field name="weekStart" type="list" default="0"
+			       label="COM_MATUKIO_CALENDAR_WEEK_START">
+				<option value="0">COM_MATUKIO_SUNDAY</option>
+				<option value="1">COM_MATUKIO_MONDAY</option>
+			</field>
+
+		</fieldset>
+	</fields>
+</metadata>

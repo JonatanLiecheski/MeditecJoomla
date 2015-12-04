@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+	<name>mod_matukio_calendar</name>
+	<creationDate>2014-08-03</creationDate>
+	<author>Compjoom - Yves Hoppe</author>
+	<copyright>(C) 2013 Compojoom - Yves Hoppe</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>yves@compojoom.com</authorEmail>
+	<authorUrl>http://compojoom.com</authorUrl>
+	<version>4.5.0</version>
+	<description>Shows a calendar with the upcoming events!</description>
+	<files>
+		<file>helper.php</file>
+<file>index.html</file>
+<file module="mod_matukio_calendar">mod_matukio_calendar.php</file>
+<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+		
+	</languages>
+	<media destination="mod_matukio_calendar" folder="media/mod_matukio_calendar">
+		
+	</media>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="timeFormat" type="text" size="10" default="H:mm"
+				       label="MOD_MATUKIO_CALENDAR_JQUERY_TIME_FORMAT"
+				       description="MOD_MATUKIO_CALENDAR_JQUERY_TIME_FORMAT_DESC">
+				</field>
+
+				<field name="timeFormatAgenda" type="text" size="10" default="H:mm{ - H:mm}"
+				       label="MOD_MATUKIO_CALENDAR_JQUERY_TIME_FORMAT_AGENDA"
+				       description="MOD_MATUKIO_CALENDAR_JQUERY_TIME_FORMAT_AGENDA_DESC">
+				</field>
+
+				<field name="weekStart" type="list" default="0"
+				       label="MOD_MATUKIO_CALENDAR_WEEK_START">
+					<option value="0">MOD_MATUKIO_SUNDAY</option>
+					<option value="1">MOD_MATUKIO_MONDAY</option>
+				</field>
+
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_MATUKIO_CALENDAR_CLASS_SUFFIX"
+				       description="MOD_MATUKIO_CALENDAR_CLASS_SUFFIX_DESC"/>
+
+				<field name="titleFormatMonth" type="text" size="10" default="MMMM yyyy"
+				       label="MOD_MATUKIO_CALENDAR_TITLE_FORMAT_MONTH">
+				</field>
+
+				<field name="titleFormatWeek" type="text" size="10" default="MMM d[ yyyy]{ '&#8212;'[ MMM] d yyyy}"
+				       label="MOD_MATUKIO_CALENDAR_TITLE_FORMAT_WEEK">
+				</field>
+
+				<field name="titleFormatDay" type="text" size="10" default="dddd, MMM d, yyyy"
+				       label="MOD_MATUKIO_CALENDAR_TITLE_FORMAT_DAY">
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
+

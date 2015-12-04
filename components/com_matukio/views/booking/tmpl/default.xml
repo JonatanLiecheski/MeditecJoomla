@@ -1,0 +1,22 @@
+<metadata>
+	<layout title="COM_MATUKIO_ORGANIZER">
+		<message>COM_MATUKIO_ORGANIZER_DESC</message>
+	</layout>
+	<name>COM_MATUKIO_ORGANIZER</name>
+	<description>COM_MATUKIO_ORGANIZER_DESC</description>
+
+	<fields name="params">
+		<fieldset name="basic"
+		          addfieldpath="/administrator/components/com_matukio/models/fields">
+
+			<field name="title" type="text" size="50" default=""
+			       label="COM_MATUKIO_ORGANIZER_TITLE">
+			</field>
+
+			<field name="organizerId" type="modal_organizer" required="true" default="0"
+			       label="COM_MATUKIO_ORGANIZER_ID">
+			</field>
+
+		</fieldset>
+	</fields>
+</metadata>

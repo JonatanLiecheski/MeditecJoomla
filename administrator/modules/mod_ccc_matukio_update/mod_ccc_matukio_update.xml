@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module"
+        version="2.5"
+        client="administrator"
+        method="upgrade"
+        >
+    <name>mod_ccc_matukio_update</name>
+    <author>compojoom.com</author>
+    <creationDate>2014-08-03</creationDate>
+    <copyright>Copyright (C) 2012 Yves Hoppe - compojoom.com. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>yves@compojoom.com</authorEmail>
+    <authorUrl>compojoom.com</authorUrl>
+    <version>4.5.0</version>
+    <description>MOD_CCC_MATUKIO_UPDATE_XML_DESCRIPTION</description>
+    <files>
+        <file>helper.php</file>
+<file>index.html</file>
+<file module="mod_ccc_matukio_update">mod_ccc_matukio_update.php</file>
+<folder>tmpl</folder>
+    </files>
+    <languages folder="administrator/language">
+        
+    </languages>
+    <help key="CCC_MODULE_UPDATE" />
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="extension"
+                        type="text"
+                        default="com_matukio"
+                        label="MOD_CCC_MATUKIO_UPDATE_EXTENSION"
+                        description="MOD_CCC_MATUKIO_UPDATE_EXTENSION_DESC" />
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                <field
+                        name="moduleclass_sfx"
+                        type="text"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="0"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                            value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                        name="automatic_title"
+                        type="radio"
+                        default="0"
+                        label="COM_MODULES_FIELD_AUTOMATIC_TITLE_LABEL"
+                        description="COM_MODULES_FIELD_AUTOMATIC_TITLE_DESC">
+                    <option
+                            value="0">JNO</option>
+                    <option
+                            value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

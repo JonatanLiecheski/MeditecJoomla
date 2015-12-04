@@ -1,0 +1,23 @@
+<metadata>
+	<layout title="COM_MATUKIO_SINGLE_EVENT">
+		<message>COM_MATUKIO_SINGLE_EVENT_DESC</message>
+	</layout>
+	<name>COM_MATUKIO_SINGLE_EVENT</name>
+	<description>COM_MATUKIO_SINGLE_EVENT_DESC</description>
+	<!-- joomla 1.6 -->
+	<fields name="params">
+		<fieldset name="basic"
+		          addfieldpath="/administrator/components/com_matukio/models/fields">
+
+			<field name="eventId" type="modal_event" required="true" default="0"
+			       label="COM_MATUKIO_EVENT_ID">
+			</field>
+
+			<field name="event_template" type="list" default="default" required="true"
+			       label="COM_MATUKIO_EVENT_TEMPLATE">
+				<option value="default">Default</option>
+				<option value="modern">Modern</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

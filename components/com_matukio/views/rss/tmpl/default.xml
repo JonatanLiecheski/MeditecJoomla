@@ -1,0 +1,17 @@
+<metadata>
+	<layout title="COM_MATUKIO_RSS_FEED">
+		<message>COM_MATUKIO_RSS_FEED_DESC</message>
+	</layout>
+	<!-- joomla 1.6 -->
+	<fields name="request">
+		<fieldset name="request">
+			<field name="format"
+			       type="list"
+			       label="Select a Format"
+			       required="true"
+					>
+				<option value="raw">Raw</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

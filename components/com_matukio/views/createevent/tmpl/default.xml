@@ -1,0 +1,31 @@
+<metadata>
+	<layout title="COM_MATUKIO_CREATE_EVENT">
+		<message>COM_MATUKIO_CREATE_EVENT_DESC</message>
+	</layout>
+	<!--- Joomla 1.6 -->
+	<fields name="params">
+		<fieldset name="basic">
+			<!--<field name="catid" type="text" size="4"  default="0"-->
+			<!--label="COM_MATUKIO_CATEGORY_ID">-->
+			<!--</field>-->
+
+			<field name="catid" type="category" extension="com_matukio" size="5" default="0"
+			       label="COM_MATUKIO_EVENTLIST_CATEGORY">
+				<option value="0">JALL</option>
+			</field>
+
+			<!--
+			<field name="number_events" type="list" default="10" label="COM_MATUKIO_EVENTLIST_COUNT">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="15">15</option>
+				<option value="20">20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+			</field>
+			-->
+		</fieldset>
+	</fields>
+</metadata>

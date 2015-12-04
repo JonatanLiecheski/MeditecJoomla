@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="search" method="upgrade">
+	<name>Search - Matukio</name>
+	<creationDate>2014-08-03</creationDate>
+	<author>Compojoom.com</author>
+	<copyright>(C) 2012 - 2013 Comopojoom - Yves Hoppe</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>yves@compojoom.com</authorEmail>
+	<authorUrl>http://compojoom.com</authorUrl>
+	<version>4.5.0</version>
+	<description>Matukio - Search Plugin</description>
+	<files>
+		<filename plugin="matukio">matukio.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="Basic Settings">
+				<field name="search_limit" type="text" size="5" default="50" label="Search Limit"
+				       description="Number of search items to return"/>
+				<field name="search_name" type="text" size="10" default="Matukio - Events" label="Search Name"
+				       description="Name of the search section"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

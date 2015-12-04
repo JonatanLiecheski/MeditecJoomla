@@ -1,0 +1,29 @@
+<metadata>
+	<layout title="COM_MATUKIO_UPCOMING_EVENTS">
+		<message>COM_MATUKIO_UPCOMING_EVENTS_DESC</message>
+	</layout>
+	<name>COM_MATUKIO_UPCOMING_EVENTS</name>
+	<description>COM_MATUKIO_UPCOMING_EVENTS_DESC</description>
+	<!-- joomla 1.6 -->
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="title" type="text" size="50" default="COM_MATUKIO_UPCOMING_EVENTS"
+			       label="COM_MATUKIO_UPCOMING_EVENTS_TITLE">
+			</field>
+
+			<field name="catid" type="category" extension="com_matukio" size="5" default="0"
+			       label="COM_MATUKIO_EVENTLIST_CATEGORY" multiple="multiple">
+				<option value="0">JALL</option>
+			</field>
+
+			<field name="number" type="text" size="4" default="10" required="true"
+			       label="COM_MATUKIO_UPCOMING_EVENTS_COUNT">
+			</field>
+		</fieldset>
+		<fieldset name="advanced">
+			<field name="orderby" type="text" size="50" default="r.begin ASC" required="true"
+			       label="COM_MATUKIO_UPCOMING_EVENTS_ORDER_BY">
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

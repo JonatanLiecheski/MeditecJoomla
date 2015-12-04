@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+		       readonly="true" class="readonly"
+		       description="JGLOBAL_FIELD_ID_DESC"/>
+
+		<field name="modified_by" type="user"
+		       label="JGLOBAL_FIELD_CREATED_BY_LABEL" description="JGLOBAL_FIELD_CREATED_BY_Desc"/>
+
+		<field name="created_by" type="user"
+		       label="JGLOBAL_FIELD_CREATED_BY_LABEL" description="JGLOBAL_FIELD_CREATED_BY_Desc"/>
+
+		<field name="published" type="list" default="1" label="COM_MATUKIO_PUBLISHED" required="true">
+			<option value="1">COM_MATUKIO_YES</option>
+			<option value="0">COM_MATUKIO_NO</option>
+		</field>
+	</fieldset>
+</form>

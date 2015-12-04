@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+    <name>mod_matukio</name>
+    <creationDate>2014-08-03</creationDate>
+    <author>Compjoom - Yves Hoppe</author>
+    <copyright>(C) 2012 Compojoom - Yves Hoppe</copyright>
+    <license>http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>yves@compojoom.com</authorEmail>
+    <authorUrl>http://compojoom.com</authorUrl>
+    <version>4.5.0</version>
+    <description>Old default Module for Matukio, comes with many options and settings to customize the output!</description>
+    <files>
+        <folder>images</folder>
+<file>index.html</file>
+<file module="mod_matukio">mod_matukio.php</file>
+    </files>
+    <languages folder="language">
+        
+    </languages>
+    <media destination="mod_matukio" folder="media/mod_matukio">
+        
+    </media>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+                // -------------------------------------------------------
+                // Modulklassensuffix abfragen
+                // -------------------------------------------------------
+                <field name="moduleclass_sfx" type="text" default="" label="MOD_MATUKIO_CLASS_SUFFIX"
+                       description="MOD_MATUKIO_CLASS_SUFFIX_DESC"/>
+
+                // -------------------------------------------------------
+                // Art der Anzeige
+                // -------------------------------------------------------
+                <field name="@spacer" type="spacer" default="" label="" description=""/>
+                <field name="sem_m039" type="radio" default="0" label="MOD_MATUKIO_TYPE_OF_SHOWN_INFORMATION"
+                       description="MOD_MATUKIO_WHAT_SHOULD_THE_MODULE_SHOW">
+                    <option value="0">MOD_MATUKIO_STATISTICS</option>
+                    <option value="1">MOD_MATUKIO_EVENTS</option>
+                    <option value="2">MOD_MATUKIO_CALENDAR</option>
+                </field>
+
+                // -------------------------------------------------------
+                // Statistik
+                // -------------------------------------------------------
+                <field name="@spacer" type="spacer" default="" label="" description=""/>
+                <field name="mod_sem_space1" label="MOD_MATUKIO_STATISTICS">
+                </field>
+
+                // -------------------------------------------------------
+                // S - alle Veranstaltungen
+                // -------------------------------------------------------
+                <field name="sem_m035" type="radio" default="1" label="MOD_MATUKIO_SHOW_STATS_ALL_EVENTS"
+                       description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // S - aktuelle Veranstaltungen
+                // -------------------------------------------------------
+                <field name="sem_m037" type="radio" default="1" label="MOD_MATUKIO_SHOW_STATS_RECENT_EVENTS"
+                       description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // S - alte Veranstaltungen
+                // -------------------------------------------------------
+                <field name="sem_m036" type="radio" default="1" label="MOD_MATUKIO_SHOW_STATS_OLD_EVENTS"
+                       description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // Statistik und Veranstaltungen
+                // -------------------------------------------------------
+                <field name="@spacer" type="spacer" default="" label="" description=""/>
+                <field name="mod_sem_space0" label="MOD_MATUKIO_STATS_AND_EVENTS">
+                </field>
+
+                // -------------------------------------------------------
+                // SuV - Zugriffe
+                // -------------------------------------------------------
+                <field name="sem_m034" type="radio" default="1" label="MOD_MATUKIO_SHOW_HITS" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // SuV - gebuchte Plaetze
+                // -------------------------------------------------------
+                <field name="sem_m028" type="radio" default="1" label="MOD_MATUKIO_SHOW_NUMBER_OF_BOOKED_SEATS"
+                       description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // SuV - freie Plaetze
+                // -------------------------------------------------------
+                <field name="sem_m033" type="radio" default="1" label="MOD_MATUKIO_SHOW_FREE_SEATS" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // SuV - Buchungen
+                // -------------------------------------------------------
+                <field name="sem_m029" type="radio" default="1" label="MOD_MATUKIO_SHOW_NUMBER_OF_BOOKINGS"
+                       description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // SuV - bezahlte Buchungen
+                // -------------------------------------------------------
+                <field name="sem_m030" type="radio" default="1" label="MOD_MATUKIO_SHOW_NUMBER_OF_PAID_BOOKINGS"
+                       description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // SuV - Zertifikate
+                // -------------------------------------------------------
+                <field name="sem_m031" type="radio" default="1" label="MOD_MATUKIO_SHOW_NUMBER_OF_CERTIFICATES"
+                       description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // Veranstaltungen
+                // -------------------------------------------------------
+                <field name="@spacer" type="spacer" default="" label="" description=""/>
+                <field name="mod_sem_space2" label="MOD_MATUKIO_EVENTS">
+                </field>
+
+                // -------------------------------------------------------
+                // V - Sortierung
+                // -------------------------------------------------------
+                <field name="sem_m052" type="list" default="0" label="MOD_MATUKIO_SORT_BY" description="">
+                    <option value="0">MOD_MATUKIO_BEGIN</option>
+                    <option value="1">MOD_MATUKIO_END</option>
+                    <option value="2">MOD_MATUKIO_CLOSING_DATE</option>
+                    <option value="4">MOD_MATUKIO_HITS</option>
+                    <option value="7">MOD_MATUKIO_RATING</option>
+                </field>
+
+                // -------------------------------------------------------
+                // V - Richtung
+                // -------------------------------------------------------
+                <field name="sem_m063" type="list" default="0" label="MOD_MATUKIO_DIRECTION" description="">
+                    <option value="0">MOD_MATUKIO_ASCENDING</option>
+                    <option value="1">MOD_MATUKIO_DESCENDING</option>
+                </field>
+
+                // -------------------------------------------------------
+                // V - Anzahl der Veranstaltungen
+                // -------------------------------------------------------
+                <field name="sem_m066" type="list" default="5" label="MOD_MATUKIO_NUMBER_OF_EVENTS_TO_SHOW"
+                       description="">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </field>
+
+                // -------------------------------------------------------
+                // V - zufaellige Auswahl
+                // -------------------------------------------------------
+                <field name="sem_m081" type="radio" default="0" label="MOD_MATUKIO_RANDOM_SELECTION" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // V - Verlinkter Titel
+                // -------------------------------------------------------
+                <field name="sem_m078" type="radio" default="1" label="MOD_MATUKIO_MAKE_TITLE_A_LINK" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // Veranstaltungen und Kalender
+                // -------------------------------------------------------
+                <field name="@spacer" type="spacer" default="" label="" description=""/>
+                <field name="mod_sem_space3" label="MOD_MATUKIO_EVENTS_AND_CALENDAR">
+                </field>
+
+                // -------------------------------------------------------
+                // VuK - Auswahl
+                // -------------------------------------------------------
+                <field name="sem_m046" type="list" default="0" label="MOD_MATUKIO_TYPE" description="">
+                    <option value="0">MOD_MATUKIO_RECENT_EVENTS</option>
+                    <option value="1">MOD_MATUKIO_OLD_EVENTS</option>
+                    <option value="2">MOD_MATUKIO_ALL_EVENTS</option>
+                </field>
+
+                // -------------------------------------------------------
+                // VuK - Kategorien
+                // -------------------------------------------------------
+                <field name="sem_m050" type="text" default="" label="MOD_MATUKIO_CATEGORY_IDS"
+                       description="MOD_MATUKIO_CATEGORY_IDS_DESC">
+                </field>
+
+                // -------------------------------------------------------
+                // VuK - Veranstalter
+                // -------------------------------------------------------
+                <field name="sem_m082" type="text" default="" label="MOD_MATUKIO_ORGANZER_IDS"
+                       description="MOD_MATUKIO_USER_IDS">
+                </field>
+
+                // -------------------------------------------------------
+                // VuK - Datumsformat
+                // -------------------------------------------------------
+                <field name="sem_m043" type="text" default="d.m.Y, H:i" label="MOD_MATUKIO_DATE_FORMAT" description="">
+                </field>
+
+                // -------------------------------------------------------
+                // VuK - Beginn
+                // -------------------------------------------------------
+                <field name="sem_m067" type="radio" default="1" label="MOD_MATUKIO_SHOW_BEGIN" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // VuK - Ende
+                // -------------------------------------------------------
+                <field name="sem_m068" type="radio" default="1" label="MOD_MATUKIO_SHOW_END" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // VuK - Anmeldeschluss
+                // -------------------------------------------------------
+                <field name="sem_m069" type="radio" default="1" label="MOD_MATUKIO_SHOW_CLOSING_DATE" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // VuK - Veroeffentlichung
+                // -------------------------------------------------------
+                <field name="sem_m070" type="radio" default="1" label="MOD_MATUKIO_SHOW_PUBLISHING_DATE" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // VuK - Ort
+                // -------------------------------------------------------
+                <field name="sem_m079" type="radio" default="1" label="MOD_MATUKIO_DISPLAY_LOCATION" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // VuK - Kurzbeschreibung
+                // -------------------------------------------------------
+                <field name="sem_m071" type="radio" default="1" label="MOD_MATUKIO_SHOW_SHORT_DESCRIPTION"
+                       description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // VuK - Link zur Übersicht
+                // -------------------------------------------------------
+                <field name="sem_m075" type="radio" default="1" label="MOD_MATUKIO_DISPLAY_LINK" description="">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // Kalender
+                // -------------------------------------------------------
+                <field name="@spacer" type="spacer" default="" label="" description=""/>
+                <field name="mod_sem_space4" label="MOD_MATUKIO_CALENDAR">
+                </field>
+
+                // -------------------------------------------------------
+                // K - Beginn der Woche
+                // -------------------------------------------------------
+                <field name="sem_m088" type="radio" default="1" label="MOD_MATUKIO_BEGIN_OF_THE_WEEK" description="">
+                    <option value="0">Sunday</option>
+                    <option value="1">Monday</option>
+                </field>
+
+                // -------------------------------------------------------
+                // K - CSS Kalender
+                // -------------------------------------------------------
+                <field name="sem_m084" type="text" default="border-spacing:0px;border-collapse:collapse;"
+                       label="MOD_MATUKIO_CSS_STYLE" description="">
+                </field>
+
+                // -------------------------------------------------------
+                // K - CSS Monat
+                // -------------------------------------------------------
+                <field name="sem_m089" type="text"
+                       default="background-color:#000000;color:#FFFFFF;text-align:center;font-weight:bold;padding:2px;"
+                       label="MOD_MATUKIO_CSS_OF_THE_MONTH" description="">
+                </field>
+
+                // -------------------------------------------------------
+                // K - CSS Link
+                // -------------------------------------------------------
+                <field name="sem_m091" type="text" default="color:#FFFFFF;font-weight:bold;text-decoration:none;"
+                       label="MOD_MATUKIO_CSS_STYLE_LINKS" description="">
+                </field>
+
+                // -------------------------------------------------------
+                // K - CSS Wochentage
+                // -------------------------------------------------------
+                <field name="sem_m090" type="text"
+                       default="font-weight:bold;text-align:center;padding:2px;background-color:#D9D9D9;width:20px;"
+                       label="MOD_MATUKIO_CSS_OF_DAY_NAMES" description="">
+                </field>
+
+                // -------------------------------------------------------
+                // K - CSS leerer Tag
+                // -------------------------------------------------------
+                <field name="sem_m085" type="text"
+                       default="border:1px solid #D9D9D9;text-align:center;font-size:8pt;vertical-align:top;height:30px;"
+                       label="MOD_MATUKIO_CSS_STYLE_DAYS_WITHOUT_EVENT" description="">
+                </field>
+
+                // -------------------------------------------------------
+                // K - CSS Tag mit Veranstaltung
+                // -------------------------------------------------------
+                <field name="sem_m086" type="text"
+                       default="border:1px solid #D9D9D9;text-align:center;font-size:8pt;vertical-align:top;height:30px;"
+                       label="MOD_MATUKIO_CSS_STYLE_DAYS_WITH_EVENT" description="">
+                </field>
+
+                // -------------------------------------------------------
+                // K - CSS heute
+                // -------------------------------------------------------
+                <field name="sem_m087" type="text" default="background-color:#E9E9E9;font-weight: bold;"
+                       label="MOD_MATUKIO_CSS_STYLE_TODAY" description="">
+                </field>
+
+            </fieldset>
+            <fieldset name="advanced">
+
+                // -------------------------------------------------------
+                // Anzeigeeffekt nutzen
+                // -------------------------------------------------------
+                <field name="sem_m074" type="radio" default="0" label="MOD_MATUKIO_USE_EFFECT"
+                       description="MOD_MATUKIO_CHOOSE_YES_IF_YOU_WANT">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                // -------------------------------------------------------
+                // Hoehe Effektbereich
+                // -------------------------------------------------------
+                <field name="sem_m023" type="text" default="150" label="MOD_MATUKIO_HIGHT_EFFECT_AREA"
+                       description="MOD_MATUKIO_HIGHT_EFFECT_AREA_DESC">
+                </field>
+
+                // -------------------------------------------------------
+                // Art des Effekts
+                // -------------------------------------------------------
+                <field name="sem_m017" type="list" default="scroll" label="MOD_MATUKIO_BEHAVIOR"
+                       description="MOD_MATUKIO_EFFECT_TYPE">
+                    <option value="scroll">MOD_MATUKIO_SCROLL</option>
+                    <option value="alternate">MOD_MATUKIO_ALTERNATE</option>
+                </field>
+
+                // -------------------------------------------------------
+                // Richtung
+                // -------------------------------------------------------
+                <field name="sem_m021" type="list" default="up" label="MOD_MATUKIO_DIRECTION"
+                       description="MOD_MATUKIO_DIRECTION_DESC">
+                    <option value="up">MOD_MATUKIO_UP</option>
+                    <option value="down">MOD_MATUKIO_DOWN</option>
+                    <option value="left">MOD_MATUKIO_LEFT</option>
+                    <option value="right">MOD_MATUKIO_RIGHT</option>
+                </field>
+
+                // -------------------------------------------------------
+                // Schubweite
+                // -------------------------------------------------------
+                <field name="sem_m015" type="text" default="1" label="MOD_MATUKIO_AMOUNT"
+                       description="MOD_MATUKIO_HOW_MANY_PIXELS">
+                </field>
+
+                // -------------------------------------------------------
+                // Verzoegerung
+                // -------------------------------------------------------
+                <field name="sem_m019" type="text" default="50" label="MOD_MATUKIO_DELAY"
+                       description="MOD_MATUKIO_DELAY_DESC">
+                </field>
+
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>
+

@@ -1,0 +1,62 @@
+<metadata>
+	<layout title="COM_MATUKIO_CALENDAR_VIEW">
+		<message>COM_MATUKIO_CALENDAR_VIEW_DESC</message>
+	</layout>
+	<name>COM_MATUKIO_CALENDAR_VIEW</name>
+	<description>COM_MATUKIO_CALENDAR_VIEW_DESC</description>
+	<!-- joomla 1.6 -->
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="title" type="text" size="50" default="COM_MATUKIO_CALENDAR_VIEW"
+			label="COM_MATUKIO_CALENDAR_TITLE">
+			</field>
+
+			<field name="timeFormat" type="text" size="10" default="H:mm"
+			       label="COM_MATUKIO_CALENDAR_JQUERY_TIME_FORMAT"
+			       description="COM_MATUKIO_CALENDAR_JQUERY_TIME_FORMAT_DESC">
+			</field>
+
+			<field name="timeFormatAgenda" type="text" size="10" default="H:mm{ - H:mm}"
+			       label="COM_MATUKIO_CALENDAR_JQUERY_TIME_FORMAT_AGENDA"
+			       description="COM_MATUKIO_CALENDAR_JQUERY_TIME_FORMAT_AGENDA_DESC">
+			</field>
+
+			<field name="weekStart" type="list" default="0"
+			       label="COM_MATUKIO_CALENDAR_WEEK_START">
+				<option value="0">COM_MATUKIO_SUNDAY</option>
+				<option value="1">COM_MATUKIO_MONDAY</option>
+			</field>
+
+		</fieldset>
+		<fieldset name="advanced">
+			<field name="titleFormatMonth" type="text" size="10" default="MMMM yyyy"
+			       label="COM_MATUKIO_CALENDAR_TITLE_FORMAT_MONTH">
+			</field>
+
+			<field name="titleFormatWeek" type="text" size="10" default="MMM d[ yyyy]{ '&#8212;'[ MMM] d yyyy}"
+			       label="COM_MATUKIO_CALENDAR_TITLE_FORMAT_WEEK">
+			</field>
+
+			<field name="titleFormatDay" type="text" size="10" default="dddd, MMM d, yyyy"
+			       label="COM_MATUKIO_CALENDAR_TITLE_FORMAT_DAY">
+			</field>
+
+			<field name="columnMonth" type="text" size="10" default="ddd"
+			       label="COM_MATUKIO_CALENDAR_TITLE_COLUMN_FORMAT_MONTH">
+			</field>
+
+			<field name="columnWeek" type="text" size="10" default="ddd M/d"
+			       label="COM_MATUKIO_CALENDAR_TITLE_COLUMN_FORMAT_WEEK">
+			</field>
+
+			<field name="columnDay" type="text" size="10" default="dddd M/d"
+			       label="COM_MATUKIO_CALENDAR_TITLE_COLUMN_FORMAT_DAY">
+			</field>
+
+			<field name="axisFormat" type="text" size="10" default="H:mm"
+			       label="COM_MATUKIO_CALENDAR_TITLE_AXIS_FORMAT">
+			</field>
+
+		</fieldset>
+	</fields>
+</metadata>

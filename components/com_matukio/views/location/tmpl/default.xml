@@ -1,0 +1,22 @@
+<metadata>
+	<layout title="COM_MATUKIO_LOCATION">
+		<message>COM_MATUKIO_LOCATION_DESC</message>
+	</layout>
+	<name>COM_MATUKIO_LOCATION</name>
+	<description>COM_MATUKIO_LOCATION_DESC</description>
+
+	<fields name="params">
+		<fieldset name="basic"
+		          addfieldpath="/administrator/components/com_matukio/models/fields">
+
+			<field name="title" type="text" size="50" default=""
+			       label="COM_MATUKIO_LOCATION_TITLE"
+				/>
+
+			<field name="locationId" type="modal_location" required="true" default="0"
+			       label="COM_MATUKIO_LOCATION_ID"
+				/>
+
+		</fieldset>
+	</fields>
+</metadata>
