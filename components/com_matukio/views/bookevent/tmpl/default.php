@@ -68,53 +68,36 @@ JHTML::_('script', 'media/com_matukio/js/booking.jquery.js');
 	</div>
 	<div id="mat_pageone">
 	<table class="mat_table table" border="0" cellpadding="8" cellspacing="8">
-		<?php
-		$fieldvals = null;
-		$value = array();
+    <?php
+	$user =& JFactory::getUser();	
+	$db1 =& JFactory::getDBO();
+	$query1 = $db1->getQuery(true);
+	$document = JFactory::getDocument();
 
-		if (!empty($this->booking))
-		{
-			$fieldvals = explode(";", $this->booking->newfields);
 
-			$value = array();
+	$db1->setQuery("SELECT b.name, b.email, a.catid, a.id, a.title
+			FROM #__matukio AS a, #__matukio_bookings AS b 
+			 WHERE
+				(a.id = b.semid)
+			   AND
+				(b.userid = '$user->id')
+			");
 
-			foreach ($fieldvals as $val)
-			{
-				$tmp = explode("::", $val);
+	$result1 = $db1->loadObjectList();
 
-				if (count($tmp) > 1)
-				{
-					$value[$tmp[0]] = $tmp[1];
-				}
-				else
-				{
-					$value[$tmp[0]] = "";
-				}
-			}
-		}
+	if(empty($result1)){
+	?>
 
-		foreach ($this->fields_p1 as $field)
-		{
-			// Prints the field in the table <tr><td>label</td><td>field</td>
-			if (empty($this->booking))
-			{
-				MatukioHelperUtilsBooking::printFieldElement($field, true);
-			}
-			else
-			{
-				if (!empty($value[$field->id]))
-				{
-					MatukioHelperUtilsBooking::printFieldElement($field, true, $value[$field->id]);
-				}
-				else
-				{
-					MatukioHelperUtilsBooking::printFieldElement($field, true);
-				}
-			}
-		}
-		?>
+	    <table class="mat_table" border="0" cellpadding="8" cellspacing="8">
+        <?php
+        foreach ($this->fields_p1 as $field) {
+            // Prints the field in the table <tr><td>label</td><td>field</td>
+            MatukioHelperUtilsBooking::printFieldElement($field, true);
+        }
+        ?>
+
 	</table>
-	<?php
+    <?php
 	// Old event only fields.. should be removed some time...
 	// Zusatzfelder ausgeben
 	$buchopt = MatukioHelperUtilsEvents::getEventBookableArray(0, $this->event, $this->user->id, $this->uuid, 1, $this->booking);
