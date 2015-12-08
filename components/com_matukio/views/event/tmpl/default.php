@@ -227,34 +227,7 @@ if ((($buchopt[0] > 2 AND $this->art == 0) OR ($this->art == 3 AND $usrid == 0 A
 	OR MatukioHelperSettings::getSettings('booking_unregistered', 1) == 1)))
 	AND $this->event->cancelled == 0 AND $this->event->nrbooked > 0)
 {
-	if (MatukioHelperSettings::getSettings('oldbookingform', 0) == 1)
-	{
-		// Booking button
-		if ($this->event->fees > 0)
-		{
-			$knopfunten .= " <input type=\"submit\" style=\"cursor:pointer;\" class=\"booking_button mat_button\" value=\""
-				. JTEXT::_('COM_MATUKIO_BOOK_PAID') . "\">";
-		}
-		else
-		{
-			$knopfunten .= " <input type=\"submit\" style=\"cursor:pointer;\" class=\"booking_button mat_button\" value=\""
-				. JTEXT::_('COM_MATUKIO_BOOK') . "\">";
-		}
-	}
-	else
-	{
-		$bookinglink = JRoute::_("index.php?option=com_matukio&view=bookevent&cid=" . $this->event->id . ":" . JFilterOutput::stringURLSafe($this->event->title));
-
-		$knopfoben .= "<a title=\"" . JTEXT::_('COM_MATUKIO_BOOK') . "\" href=\"" . $bookinglink . "\"><img src=\""
-			. MatukioHelperUtilsBasic::getComponentImagePath() . "1132.png\" border=\"0\" align=\"absmiddle\"></a>";
-
-		$knopfunten .= " <a title=\"" . JTEXT::_('COM_MATUKIO_BOOK') . "\" href=\"" . $bookinglink
-			. "\"><span class=\"mat_button\" style=\"cursor:pointer;\"><img src=\""
-			. MatukioHelperUtilsBasic::getComponentImagePath()
-			. "1116.png\" border=\"0\" align=\"absmiddle\">&nbsp;"
-			. JTEXT::_('COM_MATUKIO_BOOK') . "</span></a>";
-
-	}
+	include('book.php');
 }
 
 // Aenderungen speichern Veranstalter
